@@ -89,7 +89,7 @@ pub run intl_translation:extract_to_arb --output-dir=extract ./web/main.dart ./w
 
 ```bash
 # cf. generate.sh
-pub run intl_translation:generate_from_arb --generated-file-prefix= --output-dir=./web/ ./web/main.dart extract/messages_en.arb extract/messages_fr.arb
+pub run intl_translation:generate_from_arb --no-use-deferred-loading --generated-file-prefix= --output-dir=./web/ ./web/main.dart extract/messages_en.arb extract/messages_fr.arb
 ```
 - fichier généré
 

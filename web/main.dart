@@ -40,7 +40,7 @@ void initializeUI(String locale) {
   genderText = querySelector('#genderText');
   colorBox = querySelector('#colorBox');
 
-  querySelectorAll("input[name=genre]").onClick.listen((e) {
+  querySelectorAll("input[name=gender]").onClick.listen((e) {
     updateParent();
   });
 
