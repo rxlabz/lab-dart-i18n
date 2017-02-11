@@ -5,7 +5,7 @@ import 'dart:async';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl_browser.dart';
-import 'old/messages_all.dart';
+import 'messages_all.dart';
 
 import 'dart:html';
 
