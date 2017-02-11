@@ -26,7 +26,6 @@ Future main() async {
   Intl.defaultLocale = locale;
   initializeDateFormatting(locale);
   initializeMessages(locale).then((f) => localize(locale));
-
 }
 
 /// html elements initialization & event listening

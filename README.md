@@ -1,7 +1,6 @@
-# Dart i18n : Intl
+# [Dart i18n](https://github.com/dart-lang/intl) : Intl
 
-[Github](https://github.com/dart-lang/intl)
-
+[Demo]()
 
 ## Installation
 
