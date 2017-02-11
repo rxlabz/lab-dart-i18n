@@ -13,17 +13,20 @@ final _keepAnalysisHappy = Intl.defaultLocale;
 class MessageLookup extends MessageLookupByLibrary {
   get localeName => 'en';
 
-  static m0(num) => "${Intl.plural(num, zero: 'Aucun item', one: 'Un item', other: '${num} items')}";
+  static m0(g, numChild) => "${Intl.gender(g, female: 'Mother of ${numChild}', male: 'Father of ${numChild}', other: 'Parent of ${numChild}')}";
 
-  static m1(mot) => "Je dis: ${mot}";
+  static m1(num) => "${Intl.plural(num, zero: 'No item', one: 'One item', other: '${num} items')}";
+
+  static m2(mot) => "I say : ${mot}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => {
-    "Blue" : MessageLookupByLibrary.simpleMessage("Bleu"),
-    "Green" : MessageLookupByLibrary.simpleMessage("Vert"),
-    "Hi" : MessageLookupByLibrary.simpleMessage("salut"),
-    "Red" : MessageLookupByLibrary.simpleMessage("Rouge"),
-    "plurial" : m0,
-    "say" : m1
+    "Blue" : MessageLookupByLibrary.simpleMessage("Blue"),
+    "Green" : MessageLookupByLibrary.simpleMessage("Green"),
+    "Hi" : MessageLookupByLibrary.simpleMessage("Hi"),
+    "Red" : MessageLookupByLibrary.simpleMessage("Red"),
+    "lParent" : m0,
+    "plurial" : m1,
+    "say" : m2
   };
 }

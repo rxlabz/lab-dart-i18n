@@ -1,5 +1,5 @@
 {
-  "Hi": "salut",
+  "Hi": "Salut",
   "@Hi": {
     "type": "text",
     "placeholders": {}
@@ -27,8 +27,8 @@
       "num": {}
     }
   },
-  "parent": "{g, select, female {Mère de {numChild}} male {Père de {numChild}} other {Parent de {numChild}}}",
-  "@parent": {
+  "lParent": "{g, select, female {Mère de {numChild}} male {Père de {numChild}} other {Parent de {numChild}}}",
+  "@lParent": {
     "description": "dad or mom",
     "type": "text",
     "placeholders": {

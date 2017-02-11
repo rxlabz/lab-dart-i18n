@@ -5,7 +5,7 @@ import 'dart:async';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl_browser.dart';
-import 'messages_all.dart';
+import 'old/messages_all.dart';
 
 import 'dart:html';
 
@@ -76,7 +76,7 @@ void updateParent() {
   final String g =
       (querySelectorAll("input[name=gender]:checked").first as InputElement)
           .value;
-  print('gender changed ${g}');
+  print('gender changed ${g} ${lParent(g, 2)}');
   genderText.text = lParent(g, 2);
 }
 
@@ -101,7 +101,7 @@ void localizeColors() {
     new Color('B', '#00f', B())
   ];
   colors[lastSelectedColorIndex].selected = true;
-
+  colSelector.children.clear();
   colors
       .map((c) =>
           new OptionElement(data: c.label, value: c.id, selected: c.selected))
