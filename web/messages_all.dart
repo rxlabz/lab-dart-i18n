@@ -8,12 +8,12 @@ import 'package:intl/intl.dart';
 import 'package:intl/message_lookup_by_library.dart';
 import 'package:intl/src/intl_helpers.dart';
 
-import 'messages_en.dart' deferred as messages_en;
-import 'messages_fr.dart' deferred as messages_fr;
+import 'messages_en.dart' as messages_en;
+import 'messages_fr.dart' as messages_fr;
 
 Map<String, Function> _deferredLibraries = {
-  'en': () => messages_en.loadLibrary(),
-  'fr': () => messages_fr.loadLibrary(),
+  'en': () => new Future.value(null),
+  'fr': () => new Future.value(null),
 };
 
 MessageLookupByLibrary _findExact(localeName) {
@@ -30,6 +30,7 @@ MessageLookupByLibrary _findExact(localeName) {
 /// User programs should call this before using [localeName] for messages.
 Future initializeMessages(String localeName) {
   var lib = _deferredLibraries[Intl.canonicalizedLocale(localeName)];
+
   var load = lib == null ? new Future.value(false) : lib();
   return load.then((_) {
     initializeInternalMessageLookup(() => new CompositeMessageLookup());
