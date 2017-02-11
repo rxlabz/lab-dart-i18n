@@ -9,10 +9,8 @@ pubspec.lock
 # Files created by dart2js
 *.dart.js
 !docs/main.dart.js
-!docs/main.dart.js_1.part.js
-!docs/main.dart.js_2.part.js
-!docs/main.dart.js_3.part.js
-*.part.js
+!docs/main.dart.js_*.part.js
+!*.part.js
 *.js.deps
 *.js.map
 *.info.json
