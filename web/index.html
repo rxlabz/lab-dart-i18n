@@ -15,18 +15,62 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.dart" type="application/dart"></script>
     <script defer src="packages/browser/dart.js"></script>
+    <style>
+        #colorBox{
+            width: 32px;
+            height: 32px;
+            display:inline-block;
+        }
+    </style>
 </head>
 
 <body>
 
-  <div id="output"></div>
 
-  <div id="console"></div>
+<select name="slctLocale" id="localeSelector">
+    <option value="fr" selected>fr_FR</option>
+    <option value="en">en_US</option>
+</select>
 
-  <select name="slctLocale" id="localeSelector">
-      <option value="fr_FR">fr_FR</option>
-      <option value="en_US">en_US</option>
-  </select>
+<hr>
+
+<div id="output"></div>
+
+<hr>
+
+<div id="console"></div>
+
+
+<hr>
+
+<div>
+    <select name="slctLocale" id="colorSelector"></select>
+    <span id="colorBox"></span>
+</div>
+
+<hr>
+<div>
+    <select name="plurial" id="numSelector">
+        <option selected>0</option>
+        <option>1</option>
+        <option>2</option>
+    </select>
+
+    <span id="plurialText"></span>
+</div>
+
+<hr>
+<div>
+    <label >
+    <input type="radio" value="male" name="gender" checked/>
+        male
+    </label>
+    <label >
+    <input type="radio" value="female" name="gender"/>
+        female
+    </label>
+    <span id="genderText"></span>
+</div>
 
 </body>
 </html>
