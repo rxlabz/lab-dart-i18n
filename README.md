@@ -76,9 +76,13 @@ String date = new DateFormat.yMMMMd().add_jm().format(new DateTime.now());
 
 ## Extraction / Génération 
 
+[intl_translation](https://github.com/dart-lang/intl_translation) permet d'extraire des données de localisation depuis des fichiers Dart,
+et de générer des bundles.dart pour les différentes l11n.
+
 ### dart -> arb generation
 
-#### format ARB : json pour traducteur
+#### [format ARB](https://github.com/googlei18n/app-resource-bundle/wiki/ApplicationResourceBundleSpecification) : json pour traducteur
+
 
 ```bash
 # cf. extract.sh
