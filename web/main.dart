@@ -24,6 +24,7 @@ int lastSelectedColorIndex = 0;
 
 Future main() async {
   String locale = await findSystemLocale();
+  print('main => findSystemLocale : ${locale}');
   initializeUI(locale);
   Intl.defaultLocale = locale;
   initializeDateFormatting(locale);
