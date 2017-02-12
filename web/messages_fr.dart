@@ -21,6 +21,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => {
+    "Male" : MessageLookupByLibrary.simpleMessage("Homme"),
+    "Female" : MessageLookupByLibrary.simpleMessage("Femme"),
     "Blue" : MessageLookupByLibrary.simpleMessage("Bleu"),
     "Green" : MessageLookupByLibrary.simpleMessage("Vert"),
     "Hi" : MessageLookupByLibrary.simpleMessage("Salut"),

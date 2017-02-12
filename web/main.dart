@@ -17,6 +17,8 @@ DivElement console;
 SpanElement plurialText;
 SpanElement genderText;
 SpanElement colorBox;
+SpanElement lblMale;
+SpanElement lblFemale;
 
 int lastSelectedColorIndex = 0;
 
@@ -39,11 +41,14 @@ void initializeUI(String locale) {
   plurialText = querySelector('#plurialText');
   genderText = querySelector('#genderText');
   colorBox = querySelector('#colorBox');
+  lblMale = querySelector('#lblMale');
+  lblFemale = querySelector('#lblFemale');
 
   querySelectorAll("input[name=gender]").onClick.listen((e) {
     updateParent();
   });
 
+  updateSelectedColor(colors[lastSelectedColorIndex].value);
   colSelector.onChange.listen((e) {
     if (!colSelector.selectedIndex.isNegative)
       lastSelectedColorIndex = colSelector.selectedIndex;
@@ -59,8 +64,6 @@ void initializeUI(String locale) {
     Intl.defaultLocale = newLocal;
     localize(locale);
   });
-
-  updateSelectedColor(colors[lastSelectedColorIndex].value);
 }
 
 void localize(String locale) {
@@ -78,6 +81,8 @@ void updateParent() {
           .value;
   print('gender changed ${g} ${lParent(g, 2)}');
   genderText.text = lParent(g, 2);
+  lblFemale.text = F();
+  lblMale.text = M();
 }
 
 void updatePlurial(int value) {
@@ -117,6 +122,8 @@ String hi() => Intl.message('Hi');
 String R() => Intl.message('Red');
 String G() => Intl.message('Green');
 String B() => Intl.message('Blue');
+String M() => Intl.message('Male');
+String F() => Intl.message('Female');
 
 String plurial(int num) => Intl.plural(num,
     zero: 'No item',
